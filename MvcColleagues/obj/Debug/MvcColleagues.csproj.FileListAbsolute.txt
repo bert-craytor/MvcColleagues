@@ -96,3 +96,9 @@ d:\Bersin\MvcColleagues\MvcColleagues\bin\Moq.dll
 d:\Bersin\MvcColleagues\MvcColleagues\bin\Moq.pdb
 d:\Bersin\MvcColleagues\MvcColleagues\bin\Moq.xml
 d:\Bersin\MvcColleagues\MvcColleagues\obj\Debug\MvcColleagues.csprojResolveAssemblyReference.cache
+d:\Bersin\MvcColleagues\MvcColleagues\bin\Microsoft.WindowsAzure.Configuration.dll
+d:\Bersin\MvcColleagues\MvcColleagues\bin\Microsoft.WindowsAzure.Diagnostics.dll
+d:\Bersin\MvcColleagues\MvcColleagues\bin\Microsoft.WindowsAzure.Storage.dll
+d:\Bersin\MvcColleagues\MvcColleagues\bin\Microsoft.WindowsAzure.Diagnostics.StorageUtility.dll
+d:\Bersin\MvcColleagues\MvcColleagues\bin\Microsoft.WindowsAzure.Diagnostics.xml
+d:\Bersin\MvcColleagues\MvcColleagues\bin\Microsoft.WindowsAzure.Storage.xml
