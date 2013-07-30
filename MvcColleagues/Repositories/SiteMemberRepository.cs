@@ -5,16 +5,25 @@ using System.Linq.Expressions;
 using MvcColleagues.Models.SiteMembers;
 using NHibernate;
 using NHibernate.Criterion;
+using NHibernate.Linq;
 
 namespace MvcColleagues.Repositories
 {
     public class SiteMemberRepository : Repository<SiteMember>
     {
 
+        public SiteMemberRepository() {}
+
         public SiteMemberRepository(ISession session)
         {
             this._session = session;
         }
+
+        public override IQueryable<SiteMember> GetAll()
+        {
+            return _session.Query<SiteMember>();
+        }
+
 
         public IList<SiteMember> GetSuggestedColleagues(List<Colleague> colleagues)
         {
@@ -128,7 +137,9 @@ namespace MvcColleagues.Repositories
    
         public IList<SiteMember> GetPage(int start, int pageSize , IList<Colleague> colleagues )
         {
-         
+            if (colleagues.Count == 0)
+                return new List<SiteMember>();
+
             var criteria = _session.CreateCriteria<SiteMember>()
                                 .SetFirstResult(start)
                                 .SetMaxResults(pageSize);

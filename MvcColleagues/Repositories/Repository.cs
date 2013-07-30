@@ -36,7 +36,7 @@ namespace MvcColleagues.Repositories
             _session.Transaction.Rollback();
         }
 
-        public IQueryable<T> GetAll()
+        public virtual IQueryable<T> GetAll()
         {
             return _session.Query<T>();
         }
