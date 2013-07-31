@@ -1,0 +1,47 @@
+﻿@model MvcColleagues.Views.PagedData<MvcColleagues.Models.SiteMembers.SiteMember>
+  <div><text id="currentPage" style="visibility:hidden" >@Model.CurrentPage</text></div>
+  @foreach ( var member in Model.Data ) {
+        <div style="float:left;border-bottom: 1px dashed;  clear:both;  ">
+            <div class="innerleftcolumn" style="float:left ;padding:2px">
+                <img src="~/Images/Face.png"
+                     width="90"
+                     height="90"
+                     alt="Photo" >
+               
+            </div>
+            <div class="innermiddlecolumn" >
+                <ul style="  margin-top:10px; margin-left:0px; margin-bottom:10px; float:left; padding-left:5px;padding-bottom:10px;list-style-type:none">
+                    <li style="font-weight:bold;font-size:larger;">@member.FullName </li>
+                    <li>@member.JobTitle</li>
+                    <li>@member.Company</li> 
+                    <li>@member.Location</li>
+                </ul>
+            </div>
+            <div class="innerrightcolumn" style="vertical-align:top;float:right;">
+                <span style="vertical-align:top;text-align:right">
+                    <img src="~/Images/Education.png"
+                         width="25" 
+                         height="25"  
+                         alt="Education" style="background-color:transparent;float:right;clear:both;vertical-align:top;margin:2px;">
+                    <img src="~/Images/Email.png"
+                         width="25"
+                         height="25"
+                         alt="Email" style="background-color:transparent;float:right;margin:2px;">
+                    <img src="~/Images/Delete.png"
+                         width="25"
+                         height="25" 
+                         alt="Delete" style="background-color:transparent;float:right;margin:2px;">
+                </span>
+                <div id="sharedBox" style="float:right;clear:both;border:1px solid;border-radius:5px; margin:2px;padding:2px">
+                    <span id="sharedBox1" style="vertical-align: middle;">
+                        <img src="~/Images/Shared.png"
+                             width="25" 
+                             height="25"  
+                             alt="Shared" style="background-color:transparent;float:left;clear:both;vertical-align:top;">
+                         <text id="currentUid" style="visibility:hidden" >@member.Uid</text> 
+                        <text id="sharedCount" style="vertical-align:bottom;text-align:center;margin:2px;padding-top:10px;">@member.SharedColleaguesCount shared</text>
+                    </span>
+                </div>
+            </div>
+        </div>
+    }
