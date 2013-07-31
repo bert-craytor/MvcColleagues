@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MvcColleagues.Azure" generation="1" functional="0" release="0" Id="c5cf0871-a6b6-4d53-84f3-1a82643b962d" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
+<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MvcColleagues.Azure" generation="1" functional="0" release="0" Id="9e93c648-a4ee-4d80-8186-119fc0d3c55e" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
   <groups>
     <group name="MvcColleagues.AzureGroup" generation="1" functional="0" release="0">
       <componentports>
@@ -8,11 +8,46 @@
             <lBChannelMoniker name="/MvcColleagues.Azure/MvcColleagues.AzureGroup/LB:MvcColleagues:Endpoint1" />
           </inToChannel>
         </inPort>
+        <inPort name="MvcColleagues:Microsoft.WindowsAzure.Plugins.RemoteForwarder.RdpInput" protocol="tcp">
+          <inToChannel>
+            <lBChannelMoniker name="/MvcColleagues.Azure/MvcColleagues.AzureGroup/LB:MvcColleagues:Microsoft.WindowsAzure.Plugins.RemoteForwarder.RdpInput" />
+          </inToChannel>
+        </inPort>
       </componentports>
       <settings>
+        <aCS name="Certificate|MvcColleagues:Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" defaultValue="">
+          <maps>
+            <mapMoniker name="/MvcColleagues.Azure/MvcColleagues.AzureGroup/MapCertificate|MvcColleagues:Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" />
+          </maps>
+        </aCS>
         <aCS name="MvcColleagues:Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" defaultValue="">
           <maps>
             <mapMoniker name="/MvcColleagues.Azure/MvcColleagues.AzureGroup/MapMvcColleagues:Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
+          </maps>
+        </aCS>
+        <aCS name="MvcColleagues:Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" defaultValue="">
+          <maps>
+            <mapMoniker name="/MvcColleagues.Azure/MvcColleagues.AzureGroup/MapMvcColleagues:Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" />
+          </maps>
+        </aCS>
+        <aCS name="MvcColleagues:Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" defaultValue="">
+          <maps>
+            <mapMoniker name="/MvcColleagues.Azure/MvcColleagues.AzureGroup/MapMvcColleagues:Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" />
+          </maps>
+        </aCS>
+        <aCS name="MvcColleagues:Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" defaultValue="">
+          <maps>
+            <mapMoniker name="/MvcColleagues.Azure/MvcColleagues.AzureGroup/MapMvcColleagues:Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" />
+          </maps>
+        </aCS>
+        <aCS name="MvcColleagues:Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" defaultValue="">
+          <maps>
+            <mapMoniker name="/MvcColleagues.Azure/MvcColleagues.AzureGroup/MapMvcColleagues:Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" />
+          </maps>
+        </aCS>
+        <aCS name="MvcColleagues:Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" defaultValue="">
+          <maps>
+            <mapMoniker name="/MvcColleagues.Azure/MvcColleagues.AzureGroup/MapMvcColleagues:Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" />
           </maps>
         </aCS>
         <aCS name="MvcColleaguesInstances" defaultValue="[1,1,1]">
@@ -27,11 +62,51 @@
             <inPortMoniker name="/MvcColleagues.Azure/MvcColleagues.AzureGroup/MvcColleagues/Endpoint1" />
           </toPorts>
         </lBChannel>
+        <lBChannel name="LB:MvcColleagues:Microsoft.WindowsAzure.Plugins.RemoteForwarder.RdpInput">
+          <toPorts>
+            <inPortMoniker name="/MvcColleagues.Azure/MvcColleagues.AzureGroup/MvcColleagues/Microsoft.WindowsAzure.Plugins.RemoteForwarder.RdpInput" />
+          </toPorts>
+        </lBChannel>
+        <sFSwitchChannel name="SW:MvcColleagues:Microsoft.WindowsAzure.Plugins.RemoteAccess.Rdp">
+          <toPorts>
+            <inPortMoniker name="/MvcColleagues.Azure/MvcColleagues.AzureGroup/MvcColleagues/Microsoft.WindowsAzure.Plugins.RemoteAccess.Rdp" />
+          </toPorts>
+        </sFSwitchChannel>
       </channels>
       <maps>
+        <map name="MapCertificate|MvcColleagues:Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" kind="Identity">
+          <certificate>
+            <certificateMoniker name="/MvcColleagues.Azure/MvcColleagues.AzureGroup/MvcColleagues/Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" />
+          </certificate>
+        </map>
         <map name="MapMvcColleagues:Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" kind="Identity">
           <setting>
             <aCSMoniker name="/MvcColleagues.Azure/MvcColleagues.AzureGroup/MvcColleagues/Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
+          </setting>
+        </map>
+        <map name="MapMvcColleagues:Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" kind="Identity">
+          <setting>
+            <aCSMoniker name="/MvcColleagues.Azure/MvcColleagues.AzureGroup/MvcColleagues/Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" />
+          </setting>
+        </map>
+        <map name="MapMvcColleagues:Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" kind="Identity">
+          <setting>
+            <aCSMoniker name="/MvcColleagues.Azure/MvcColleagues.AzureGroup/MvcColleagues/Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" />
+          </setting>
+        </map>
+        <map name="MapMvcColleagues:Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" kind="Identity">
+          <setting>
+            <aCSMoniker name="/MvcColleagues.Azure/MvcColleagues.AzureGroup/MvcColleagues/Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" />
+          </setting>
+        </map>
+        <map name="MapMvcColleagues:Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" kind="Identity">
+          <setting>
+            <aCSMoniker name="/MvcColleagues.Azure/MvcColleagues.AzureGroup/MvcColleagues/Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" />
+          </setting>
+        </map>
+        <map name="MapMvcColleagues:Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" kind="Identity">
+          <setting>
+            <aCSMoniker name="/MvcColleagues.Azure/MvcColleagues.AzureGroup/MvcColleagues/Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" />
           </setting>
         </map>
         <map name="MapMvcColleaguesInstances" kind="Identity">
@@ -45,15 +120,37 @@
           <role name="MvcColleagues" generation="1" functional="0" release="0" software="d:\Bersin\MvcColleagues\MvcColleagues.Azure\csx\Debug\roles\MvcColleagues" entryPoint="base\x64\WaHostBootstrapper.exe" parameters="base\x64\WaIISHost.exe " memIndex="1792" hostingEnvironment="frontendadmin" hostingEnvironmentVersion="2">
             <componentports>
               <inPort name="Endpoint1" protocol="http" portRanges="80" />
+              <inPort name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.RdpInput" protocol="tcp" />
+              <inPort name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Rdp" protocol="tcp" portRanges="3389" />
+              <outPort name="MvcColleagues:Microsoft.WindowsAzure.Plugins.RemoteAccess.Rdp" protocol="tcp">
+                <outToChannel>
+                  <sFSwitchChannelMoniker name="/MvcColleagues.Azure/MvcColleagues.AzureGroup/SW:MvcColleagues:Microsoft.WindowsAzure.Plugins.RemoteAccess.Rdp" />
+                </outToChannel>
+              </outPort>
             </componentports>
             <settings>
               <aCS name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" defaultValue="" />
-              <aCS name="__ModelData" defaultValue="&lt;m role=&quot;MvcColleagues&quot; xmlns=&quot;urn:azure:m:v1&quot;&gt;&lt;r name=&quot;MvcColleagues&quot;&gt;&lt;e name=&quot;Endpoint1&quot; /&gt;&lt;/r&gt;&lt;/m&gt;" />
+              <aCS name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" defaultValue="" />
+              <aCS name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" defaultValue="" />
+              <aCS name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" defaultValue="" />
+              <aCS name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" defaultValue="" />
+              <aCS name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" defaultValue="" />
+              <aCS name="__ModelData" defaultValue="&lt;m role=&quot;MvcColleagues&quot; xmlns=&quot;urn:azure:m:v1&quot;&gt;&lt;r name=&quot;MvcColleagues&quot;&gt;&lt;e name=&quot;Endpoint1&quot; /&gt;&lt;e name=&quot;Microsoft.WindowsAzure.Plugins.RemoteAccess.Rdp&quot; /&gt;&lt;e name=&quot;Microsoft.WindowsAzure.Plugins.RemoteForwarder.RdpInput&quot; /&gt;&lt;/r&gt;&lt;/m&gt;" />
             </settings>
             <resourcereferences>
               <resourceReference name="DiagnosticStore" defaultAmount="[4096,4096,4096]" defaultSticky="true" kind="Directory" />
               <resourceReference name="EventStore" defaultAmount="[1000,1000,1000]" defaultSticky="false" kind="LogStore" />
             </resourcereferences>
+            <storedcertificates>
+              <storedCertificate name="Stored0Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" certificateStore="My" certificateLocation="System">
+                <certificate>
+                  <certificateMoniker name="/MvcColleagues.Azure/MvcColleagues.AzureGroup/MvcColleagues/Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" />
+                </certificate>
+              </storedCertificate>
+            </storedcertificates>
+            <certificates>
+              <certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" />
+            </certificates>
           </role>
           <sCSPolicy>
             <sCSPolicyIDMoniker name="/MvcColleagues.Azure/MvcColleagues.AzureGroup/MvcColleaguesInstances" />
@@ -70,11 +167,16 @@
     </group>
   </groups>
   <implements>
-    <implementation Id="c7fdf20e-d817-44b9-84df-b8acc171ee4b" ref="Microsoft.RedDog.Contract\ServiceContract\MvcColleagues.AzureContract@ServiceDefinition">
+    <implementation Id="10278529-9b90-4c46-879e-0400db0fcad5" ref="Microsoft.RedDog.Contract\ServiceContract\MvcColleagues.AzureContract@ServiceDefinition">
       <interfacereferences>
-        <interfaceReference Id="936e62c7-9dc3-4d02-b08a-b75ffe2d5e8a" ref="Microsoft.RedDog.Contract\Interface\MvcColleagues:Endpoint1@ServiceDefinition">
+        <interfaceReference Id="8b272bc0-7e7a-4905-b0c6-17a48daede14" ref="Microsoft.RedDog.Contract\Interface\MvcColleagues:Endpoint1@ServiceDefinition">
           <inPort>
             <inPortMoniker name="/MvcColleagues.Azure/MvcColleagues.AzureGroup/MvcColleagues:Endpoint1" />
+          </inPort>
+        </interfaceReference>
+        <interfaceReference Id="7692f705-ffc3-4605-9a13-b6fed14c564b" ref="Microsoft.RedDog.Contract\Interface\MvcColleagues:Microsoft.WindowsAzure.Plugins.RemoteForwarder.RdpInput@ServiceDefinition">
+          <inPort>
+            <inPortMoniker name="/MvcColleagues.Azure/MvcColleagues.AzureGroup/MvcColleagues:Microsoft.WindowsAzure.Plugins.RemoteForwarder.RdpInput" />
           </inPort>
         </interfaceReference>
       </interfacereferences>

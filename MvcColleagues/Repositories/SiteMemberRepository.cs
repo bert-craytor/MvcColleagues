@@ -64,11 +64,13 @@ namespace MvcColleagues.Repositories
             // 6.  Those with <level_id> exactly two below you, … (similar note as #2)
             // 7.  -- and so on, until seven members are filled.
            
+            // Iterate through levels
             for (int offset = 0; offset < 100; offset++)
             {
                 if (members.Count == 0)
                     break;
 
+                // modify the level offset +/-
                 for (int alt = 0; alt < 2; alt++)
                 {
                     if (members.Count == 0)
@@ -83,32 +85,50 @@ namespace MvcColleagues.Repositories
                         offsetMult *= -1;
                     }
 
-                    foreach (var member in members)
+                    var pass = 0;
+
+                    // iterate through selection conditions for level
+                    while(pass < 3 && members.Count > 0)
                     {
-                        if (member.LevelId != myRecord.LevelId + offset)
-                            continue; // skip  lower level
-
-                        if (member.FunctionId == myRecord.FunctionId && member.IndustryId == myRecord.IndustryId)
+                        foreach (var member in members)
                         {
-                            suggestedColleagues.Add(member);
-                            if (suggestedColleagues.Count == 7)
-                                return suggestedColleagues;
-                            members.Remove(member);
-                            continue;
-                        }
-                        if (member.FunctionId == myRecord.FunctionId  )
-                        {
-                            suggestedColleagues.Add(member);
-                            if (suggestedColleagues.Count == 7)
-                                return suggestedColleagues;
-                            members.Remove(member);
-                            continue;
-                        }
+                            if (member.LevelId != myRecord.LevelId + offset)
+                                pass=3; // skip  lower level
 
-                        suggestedColleagues.Add(member);
-                        if (suggestedColleagues.Count == 7)
-                            return suggestedColleagues;
-                        members.Remove(member);
+                            if(pass==0)
+                                if (member.FunctionId == myRecord.FunctionId && member.IndustryId == myRecord.IndustryId)
+                                {
+                                    suggestedColleagues.Add(member);
+                                    if (suggestedColleagues.Count == 7)
+                                        return suggestedColleagues;
+                                    members.Remove(member);
+                                    continue;
+                                }
+                                else
+                                    pass++;
+
+                            if (pass == 1)
+                                if (member.FunctionId == myRecord.FunctionId)
+                                {
+                                    suggestedColleagues.Add(member);
+                                    if (suggestedColleagues.Count == 7)
+                                        return suggestedColleagues;
+                                    members.Remove(member);
+                                    continue;
+                                }
+                                else
+                                    pass++;
+
+                            if (pass == 2)
+                            {
+                                
+                                suggestedColleagues.Add(member);
+                                if (suggestedColleagues.Count == 7)
+                                    return suggestedColleagues;
+                                members.Remove(member);
+                            }
+                           
+                        }
                     }
                 }
             }
