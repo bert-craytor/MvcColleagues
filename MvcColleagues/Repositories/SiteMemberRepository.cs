@@ -48,7 +48,7 @@ namespace MvcColleagues.Repositories
             List<SiteMember> suggestedColleagues = new List<SiteMember>();
 
            
-            int offsetMult = 1;
+       
 
             // Find all colleagues with equal Level ID, Funditon ID and Industry ID
             // The webpage will contain a “Suggested Colleagues” module which renders up to seven members 
@@ -70,14 +70,16 @@ namespace MvcColleagues.Repositories
                 if (members.Count == 0)
                     break;
 
+                int offsetMult = 1;
+
                 // modify the level offset +/-
                 for (int alt = 0; alt < 2; alt++)
                 {
                     if (members.Count == 0)
                         break;
 
-                    if (alt == 0)
-                        alt++;
+                    if (offset == 0) 
+                        alt++;  // only need on interation for 0
                     else
                     {
                         // look for levels 1 above then 1 below, 2 above, 2 below ...
