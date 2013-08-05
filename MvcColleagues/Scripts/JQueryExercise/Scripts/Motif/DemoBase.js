@@ -267,16 +267,18 @@ DemoBase.SecurityDialogs.prototype = function () {
                     colIndex = $(this).parent().children().index($(this)),
                     table,
                     row,
-                    inputs;
+                    inputs,
+                    nbrChkBoxes;
 
                 if (colIndex > 0) {
                     table = doc.getElementById(tableId);
                     row = table.rows[rowIndex+1];
                     inputs = row.getElementsByTagName('input');
+                    nbrChkBoxes = inputs.length - 1;
 
                     $.each(inputs, function (index, in1) {
-                        if(index > 0){
-                            if (index < colIndex) {
+                        if(index > 0 && index !== nbrChkBoxes){
+                            if (index < colIndex ) {
                                 $(in1).attr('checked',false);
                             } else {
                                 $(in1).attr('checked',true);

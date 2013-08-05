@@ -4,11 +4,11 @@
     <list default="true" id="138457cd-84d2-46e8-904e-b37eafb3f21b" name="Default" comment="" />
     <ignored path="Motif.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Demo.html" changelist="138457cd-84d2-46e8-904e-b37eafb3f21b" time="1375716199027" ignored="false" />
-    <file path="/DemoBase.js" changelist="138457cd-84d2-46e8-904e-b37eafb3f21b" time="1375716169859" ignored="false" />
+    <file path="/Demo.html" changelist="138457cd-84d2-46e8-904e-b37eafb3f21b" time="1375716465690" ignored="false" />
+    <file path="/DemoBase.js" changelist="138457cd-84d2-46e8-904e-b37eafb3f21b" time="1375717627877" ignored="false" />
     <file path="/a.html" changelist="138457cd-84d2-46e8-904e-b37eafb3f21b" time="1375385549986" ignored="false" />
     <file path="/Site.css" changelist="138457cd-84d2-46e8-904e-b37eafb3f21b" time="1375482695221" ignored="false" />
-    <file path="/fragment.js" changelist="138457cd-84d2-46e8-904e-b37eafb3f21b" time="1375673122999" ignored="false" />
+    <file path="/fragment.js" changelist="138457cd-84d2-46e8-904e-b37eafb3f21b" time="1375717321007" ignored="false" />
     <file path="/jquery.ui.dialog.css" changelist="138457cd-84d2-46e8-904e-b37eafb3f21b" time="1375650193214" ignored="false" />
     <file path="/jquery.ui.progressbar.css" changelist="138457cd-84d2-46e8-904e-b37eafb3f21b" time="1375562700607" ignored="false" />
     <file path="/abc.html" changelist="138457cd-84d2-46e8-904e-b37eafb3f21b" time="1375672277464" ignored="false" />
@@ -34,7 +34,7 @@
       <file leaf-file-name="Demo.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Demo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="222" column="27" selection-start="6944" selection-end="6944" vertical-scroll-proportion="0.5302245">
+            <state line="214" column="4" selection-start="6556" selection-end="6556" vertical-scroll-proportion="0.19343697">
               <folding />
             </state>
           </provider>
@@ -43,16 +43,25 @@
       <file leaf-file-name="DemoBase.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Scripts/Motif/DemoBase.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="304" column="150" selection-start="10862" selection-end="10862" vertical-scroll-proportion="0.0">
+            <state line="282" column="69" selection-start="10241" selection-end="10241" vertical-scroll-proportion="-12.48">
               <folding>
-                <marker date="1375716179343" expanded="true" signature="1330:1389" placeholder="..." />
-                <marker date="1375716179343" expanded="false" signature="1330:1337" placeholder="..." />
-                <marker date="1375716179343" expanded="false" signature="1330:1337" placeholder="..." />
-                <marker date="1375716179343" expanded="false" signature="1438:1447" placeholder="..." />
-                <marker date="1375716179343" expanded="false" signature="1593:1634" placeholder="..." />
-                <marker date="1375716179343" expanded="false" signature="8747:8758" placeholder="..." />
-                <marker date="1375716179343" expanded="false" signature="8877:8894" placeholder="..." />
+                <marker date="1375717666954" expanded="true" signature="1330:1389" placeholder="..." />
+                <marker date="1375717666954" expanded="false" signature="1330:1337" placeholder="..." />
+                <marker date="1375717666954" expanded="false" signature="1330:1337" placeholder="..." />
+                <marker date="1375717666954" expanded="false" signature="1438:1447" placeholder="..." />
+                <marker date="1375717666954" expanded="false" signature="1593:1634" placeholder="..." />
+                <marker date="1375717666954" expanded="false" signature="8747:8758" placeholder="..." />
+                <marker date="1375717666954" expanded="false" signature="8877:8894" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery-2.0.3.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Scripts/jquery-2.0.3.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="62" column="0" selection-start="1694" selection-end="1694" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -84,14 +93,14 @@
         <option value="$PROJECT_DIR$/Scripts/jquery-2.0.3.js" />
         <option value="$PROJECT_DIR$/Content/themes/custom/jquery.ui.dialog.css" />
         <option value="$PROJECT_DIR$/abc.html" />
-        <option value="$PROJECT_DIR$/Scripts/Motif/DemoBase.js" />
         <option value="$PROJECT_DIR$/Demo.html" />
+        <option value="$PROJECT_DIR$/Scripts/Motif/DemoBase.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="942" />
-    <option name="y" value="135" />
+    <option name="x" value="82" />
+    <option name="y" value="58" />
     <option name="width" value="1928" />
     <option name="height" value="827" />
   </component>
@@ -330,7 +339,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="942" y="135" width="1928" height="827" extended-state="0" />
+    <frame x="82" y="58" width="1928" height="827" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -410,7 +419,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="96" />
+      <option name="time" value="98" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -439,13 +448,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="36" selection-start="874" selection-end="874" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1375716179343" expanded="true" signature="1330:1389" placeholder="..." />
-            <marker date="1375716179343" expanded="false" signature="1330:1337" placeholder="..." />
-            <marker date="1375716179343" expanded="false" signature="1330:1337" placeholder="..." />
-            <marker date="1375716179343" expanded="false" signature="1438:1447" placeholder="..." />
-            <marker date="1375716179343" expanded="false" signature="1593:1634" placeholder="..." />
-            <marker date="1375716179343" expanded="false" signature="8747:8758" placeholder="..." />
-            <marker date="1375716179343" expanded="false" signature="8877:8894" placeholder="..." />
+            <marker date="1375717666954" expanded="true" signature="1330:1389" placeholder="..." />
+            <marker date="1375717666954" expanded="false" signature="1330:1337" placeholder="..." />
+            <marker date="1375717666954" expanded="false" signature="1330:1337" placeholder="..." />
+            <marker date="1375717666954" expanded="false" signature="1438:1447" placeholder="..." />
+            <marker date="1375717666954" expanded="false" signature="1593:1634" placeholder="..." />
+            <marker date="1375717666954" expanded="false" signature="8747:8758" placeholder="..." />
+            <marker date="1375717666954" expanded="false" signature="8877:8894" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -503,29 +512,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Scripts/jquery-2.0.3.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4696" column="147" selection-start="129459" selection-end="129459" vertical-scroll-proportion="12.808265">
+        <state line="62" column="0" selection-start="1694" selection-end="1694" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Scripts/Motif/DemoBase.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="304" column="150" selection-start="10862" selection-end="10862" vertical-scroll-proportion="0.0">
+        <state line="282" column="69" selection-start="10241" selection-end="10241" vertical-scroll-proportion="-12.48">
           <folding>
-            <marker date="1375716179343" expanded="true" signature="1330:1389" placeholder="..." />
-            <marker date="1375716179343" expanded="false" signature="1330:1337" placeholder="..." />
-            <marker date="1375716179343" expanded="false" signature="1330:1337" placeholder="..." />
-            <marker date="1375716179343" expanded="false" signature="1438:1447" placeholder="..." />
-            <marker date="1375716179343" expanded="false" signature="1593:1634" placeholder="..." />
-            <marker date="1375716179343" expanded="false" signature="8747:8758" placeholder="..." />
-            <marker date="1375716179343" expanded="false" signature="8877:8894" placeholder="..." />
+            <marker date="1375717666954" expanded="true" signature="1330:1389" placeholder="..." />
+            <marker date="1375717666954" expanded="false" signature="1330:1337" placeholder="..." />
+            <marker date="1375717666954" expanded="false" signature="1330:1337" placeholder="..." />
+            <marker date="1375717666954" expanded="false" signature="1438:1447" placeholder="..." />
+            <marker date="1375717666954" expanded="false" signature="1593:1634" placeholder="..." />
+            <marker date="1375717666954" expanded="false" signature="8747:8758" placeholder="..." />
+            <marker date="1375717666954" expanded="false" signature="8877:8894" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="222" column="27" selection-start="6944" selection-end="6944" vertical-scroll-proportion="0.5302245">
+        <state line="214" column="4" selection-start="6556" selection-end="6556" vertical-scroll-proportion="0.19343697">
           <folding />
         </state>
       </provider>
