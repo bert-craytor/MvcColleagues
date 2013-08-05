@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo</title>
+    <script src="Scripts/jquery-2.0.3.js" type="text/javascript"></script>
+    <script src="Scripts/jquery-ui-1.10.3.custom.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.unobtrusive-ajax.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.validate.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.validate.unobtrusive.js" type="text/javascript"></script>
+    <script src="Scripts/jquery-migrate-1.1.1.js" type="text/javascript"></script>
+    <script src="Content/Site.css" rel="stylesheet"></script>
+
+    <link href="Content/themes/custom/jquery.ui.all.css" rel="stylesheet" />
+    <script src="Scripts/Motif/DemoBase.js" type="text/javascript"></script>
+
+    <style type="text/css">
+        .ui-dialog {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 0;
+            outline: 0;
+        }
+        .ui-dialog .ui-dialog-titlebar {
+            padding: 0;
+            position: relative;
+        }
+        .ui-dialog .ui-dialog-title {
+            float: left;
+            margin: 0;
+            white-space: nowrap;
+            width: 90%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .ui-dialog .ui-dialog-content {
+            position: relative;
+            border: 0;
+            padding: 0;
+            margin: 0;
+            background: none;
+            overflow: auto;
+        }
+        .ui-dialog .ui-dialog-buttonpane {
+            text-align: left;
+            border-width: 1px 0 0 0;
+            background-image: none;
+            margin-top: .5em;
+            padding: .3em 1em .5em .4em;
+        }
+        .ui-dialog  table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            margin: 0px 0px 0px 0px; /* 0.75em; */
+            padding: 0px;
+            width: auto;
+            border: 1 solid;
+            font-family: Arial;
+            background-color:white;
+            font-size: 10pt;
+        }
+
+        .ui-dialog th {
+            font-size: 12pt;
+            font-weight: bold;
+            text-align: left;
+            background-color: blue;
+            color: white;
+            border: 1 solid;
+            margin: 0;
+            padding: 0;
+        }
+
+        .ui-dialog  th a {
+            display: block;
+            position: relative;
+        }
+
+        .ui-dialog th a:link, th a:visited, th a:active, th a:hover {
+            color: #333;
+            font-family: Arial;
+            font-size: 10pt;
+            text-decoration: none;
+            padding: 0;
+        }
+
+        .ui-dialog  th a:hover {
+            color: #345;
+        }
+
+        .ui-dialog th.asc a, th.desc a {
+            margin-right: .75em;
+        }
+
+        th.asc a:after, th.desc a:after {
+            display: block;
+            position: absolute;
+            right: 0em;
+            top: 0;
+            font-size: 0.25em;
+        }
+
+        .ui-dialog  th.asc a:after {
+            content: '▲';
+        }
+
+        .ui-dialog th.desc a:after {
+            content: '▼';
+        }
+
+        .ui-dialog td {
+            padding: 0.25em 2em 0.25em 0em;
+            margin: 0;
+            height: 14pt;
+            width: 40px;
+            border: solid 1px;
+            font-family: Arial;
+            font-size: 10pt;
+        }
+
+        .ui-dialog tr.pager td {
+            padding: 0 0.25em 0 0;
+        }
+
+
+
+        .whiteR {   background-color: white; z-index: 1000;}
+        .blackR {   background-color: black; z-index: 1001;}
+
+    </style>
+</head>
+
+<body>
+<div class='demo1'>
+    <button id="securityControlsBt">Update List of Security Controls</button>  <br/>
+    <label for="spinner">Number of security levels:</label>
+    <input id="spinner"  style="width:30px;"    name="value" /><br/>
+    <button id="getSecurityBt">Get Security Levels</button><br/>
+    <button id="drawSquaresBt">Draw Squares</button><br/>
+    <br/>
+    <br/>
+    <p id='results'>
+    [results]
+    </p>
+</div>
+
+<div id='squares1' >
+
+</div>
+<div id='squares2' >
+
+</div>
+<script type="text/javascript">
+    var levelCount =-1;
+
+
+    $(document).ready(function() {
+
+        // Create the JQuery UI Spinner Widget, to allow the user to
+        // specify the number of security levels, with an initial value of 5
+        var spinner = $( "#spinner" ).spinner();
+        spinner.spinner('option','max',10);
+        spinner.spinner('option','min',1);
+        spinner.spinner( "value", 5 );
+
+        // Construct or DemoBase.SecurityDialogs object from prototype
+        var demo = new DemoBase.SecurityDialogs();
+
+        // Define the initial features
+        demo.features = ['Add', 'Update', 'Delete'];
+
+        var secControls = null;  // Holds the widget for updating security control features
+        var secLevels=null;  // track the number of security leves
+        var controlLevelsDialog;  // Holds the widget for updating the security control levels
+
+        // This handler will allow new features to be added.
+        $("#securityControlsBt").click(function() {
+
+             if(secControls === null) {
+                 secControls = demo.createFeatureLevelPopup(document, "secControls", "Update Security Features", 1,100,100,true);
+             }
+
+             if(secControls!= null)
+                if(!secControls.dialog('isOpen'))
+                {
+                    //   function (doc, tableId, dlg, title, x, y, minWidth, minHeight) {
+                    demo.addNewRowButton(document, 'secControls', secControls, 'Update Security Features', 10,10, 100, 100,demo.features,this.updatedSecurityControls);
+                    secControls.width= '150px';
+                    secControls.dialog('open');
+
+                }
+                else
+                {
+                    secControls.dialog('close');
+                }
+            // To indicate that we will probably need to rebuild the dialog for security control levels
+            demo.updatedSecurityControls=true;
+       });
+
+        // This handler will allow the user to set the security levels for each feature
+        $( "#getSecurityBt" ).click(function() {
+
+            var newLevels = spinner.spinner( "value" );
+
+            if(secLevels === null || newLevels != levelCount || demo.updatedSecurityControls){
+               levelCount = newLevels;
+               if(secLevels !== null){
+                   secLevels.dialog('destroy');
+               }
+               secLevels = demo.createFeatureLevelPopup(document, "security", "Security Levels", levelCount+1,100,100,true, demo.features);
+               demo.addReportLevelsButton(document,  "security", secLevels, 'Security Levels', 10,10, 100, 100,demo.features,demo.levels);
+               demo.updatedSecurityControls = false;
+            }
+
+
+            secLevels.width= 60*(levelCount+2)+40;
+            secLevels.dialog('open');
+
+        });
+
+        // This handler will allow new features to be added.
+        $("#drawSquaresBt").click(function() {
+              demo.drawSquares(document, $('#squares1'), 0,8);
+              demo.drawSquares(document, $('#squares2'), 10,25);
+        } );
+
+    });
+</script>
+
+<p> &copy; 2013 Bert Craytor, Pacifica, CA 94044 </p>
+</body>
+</html>
