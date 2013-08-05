@@ -292,57 +292,44 @@ DemoBase.SecurityDialogs.prototype = function () {
         },
 
         drawRectangle =
-        function drawrectangle(doc,  parent, cssClass, top, left, width, height ,step, color )
+        function drawrectangle(doc,  parent, top, left, width, height ,step, color )
         {
-            if(color>15 || width < 2* step) {
+            if(color > 15 || width < 2* step) {
                 return ;     // end the recursion
             }
 
-        //    var drawStyle = "{ 'position':'relative'; 'top': '" + top + "';'left': '" + left + "';'width': '" + width +
-            //                        "'; 'height': '" + height + "'}";
-
-            var rect = $("<div/>",{class: cssClass}) ;
+            var rect = $("<div/>", {} ) ;
             var hex = color.toString(16);
             var hexColor = '#' + hex+hex+hex;
 
             rect.css( { "position": "relative", "margin":"0px","border":"0", "padding":"0px",   "background-color": hexColor, "top": top, "left": left, "width": width, "height": height } );
             rect.appendTo(parent);
 
-
             var newWidth= width - 2* step;
-            return drawrectangle(doc,  rect, cssClass, step, step, newWidth,newWidth ,step , color+1);
+            return drawrectangle(doc,  rect, step, step, newWidth,newWidth ,step , color+1);
         }  ,
 
         drawSquares =
         function (doc, parent, startValue, visibleStepWidth) {
+
             // Clip startValue to acceptable range
             if(startValue > 14) { startValue = 14; }
             if(startValue < 0 ) { startValue= 0; }
+
             // Clip visibleStepWidth to reasonable range:
             if(visibleStepWidth < 0) { visibleStepWidth = 0; }
             if(visibleStepWidth > 500) { visibleStepWidth = 500; }
 
             var totalWidth = 15*visibleStepWidth*2;
+
             if(totalWidth > 1000)
                { visibleStepWidth = 1000/30; }
 
             var numberOfSteps= (15-startValue);
 
-            var black=true;
             var width = numberOfSteps*visibleStepWidth*2;
-            var top = 0;
-            var left=0;
-            var cssClass;
 
-
-              if(black){
-                 cssClass= 'blackR';
-              } else {
-                  cssClass = 'whiteR';
-              }
-              black= !black;
-
-              drawRectangle(doc, parent, cssClass, top, left, width, width,visibleStepWidth, startValue  ) ;
+            drawRectangle(doc, parent, 0, 0, width, width,visibleStepWidth, startValue  ) ;
 
         };
 
