@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MvcColleagues.Azure" generation="1" functional="0" release="0" Id="9e93c648-a4ee-4d80-8186-119fc0d3c55e" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
+<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MvcColleagues.Azure" generation="1" functional="0" release="0" Id="d9e5b682-7240-4ea5-bb26-d69be84ae344" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
   <groups>
     <group name="MvcColleagues.AzureGroup" generation="1" functional="0" release="0">
       <componentports>
@@ -167,14 +167,14 @@
     </group>
   </groups>
   <implements>
-    <implementation Id="10278529-9b90-4c46-879e-0400db0fcad5" ref="Microsoft.RedDog.Contract\ServiceContract\MvcColleagues.AzureContract@ServiceDefinition">
+    <implementation Id="36acf4de-649f-4d5d-be0e-fb804f87d0c2" ref="Microsoft.RedDog.Contract\ServiceContract\MvcColleagues.AzureContract@ServiceDefinition">
       <interfacereferences>
-        <interfaceReference Id="8b272bc0-7e7a-4905-b0c6-17a48daede14" ref="Microsoft.RedDog.Contract\Interface\MvcColleagues:Endpoint1@ServiceDefinition">
+        <interfaceReference Id="f0c95617-16d3-4d4f-b98f-34912775f004" ref="Microsoft.RedDog.Contract\Interface\MvcColleagues:Endpoint1@ServiceDefinition">
           <inPort>
             <inPortMoniker name="/MvcColleagues.Azure/MvcColleagues.AzureGroup/MvcColleagues:Endpoint1" />
           </inPort>
         </interfaceReference>
-        <interfaceReference Id="7692f705-ffc3-4605-9a13-b6fed14c564b" ref="Microsoft.RedDog.Contract\Interface\MvcColleagues:Microsoft.WindowsAzure.Plugins.RemoteForwarder.RdpInput@ServiceDefinition">
+        <interfaceReference Id="303de9be-d8ce-47e4-9a51-41bbc84edf19" ref="Microsoft.RedDog.Contract\Interface\MvcColleagues:Microsoft.WindowsAzure.Plugins.RemoteForwarder.RdpInput@ServiceDefinition">
           <inPort>
             <inPortMoniker name="/MvcColleagues.Azure/MvcColleagues.AzureGroup/MvcColleagues:Microsoft.WindowsAzure.Plugins.RemoteForwarder.RdpInput" />
           </inPort>

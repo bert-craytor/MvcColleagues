@@ -1,7 +1,7 @@
-﻿/* Author:  Bert Craytor
- * Date:    July 2013
- * Purpose: Demo Program based on Inteview Exercise
-*/
+﻿@* Author:  Bert Craytor
+ Date:    July 2013
+ Purpose: Demo Program based on Inteview Exercise*@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -15,11 +15,15 @@
         <script src="/Scripts/jquery.validate.min.js" type="text/javascript"></script>    
         <script src="/Scripts/jquery.validate.unobtrusive.min.js" type="text/javascript"></script>    
         <script src="/Scripts/MvcCol/MvcCol.Dialogs.js" type="text/javascript"></script> 
+        <script src="/Scripts/jquery-migrate-1.1.1.min.js" type="text/javascript"></script> 
+
         <link href="~/Content/themes/custom/jquery.ui.all.css" rel="stylesheet" />
 
         <meta name="viewport" content="width=device-width" />
+        
+
         @Styles.Render("~/Content/css")
-        @Scripts.Render("~/bundles/modernizr")
+  
         
         <style type="text/css">
             body{ display:block; width:98%;  background-color: white;
@@ -47,7 +51,7 @@
         <header>
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p class="site-title">@Html.ActionLink("Web Colleagues", "Index", "Home")</p>
+                    <p class="site-title">@Html.ActionLink("MVC Colleagues", "Index", "Home")</p>
                 </div>
                 <div class="float-right">
                     <section id="login">
@@ -72,11 +76,12 @@
         <footer>
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year - My Web Contacts</p>
+                    <p>&copy; @DateTime.Now.Year - William Bert Craytor</p>
                 </div>
             </div>
         </footer>
-  
+     
+        @RenderSection("scripts", required: false)
      
     </body>
 </html>

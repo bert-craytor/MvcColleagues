@@ -186,10 +186,10 @@ d:\Bersin\MvcColleagues\MvcColleagues.Azure\obj\Debug\MvcColleagues\packages.con
 d:\Bersin\MvcColleagues\MvcColleagues.Azure\obj\Debug\MvcColleagues\Scripts\jquery-2.0.3.js
 d:\Bersin\MvcColleagues\MvcColleagues.Azure\obj\Debug\MvcColleagues\Scripts\jquery-2.0.3.min.js
 d:\Bersin\MvcColleagues\MvcColleagues.Azure\obj\Debug\MvcColleagues\Scripts\jquery-2.0.3.min.map
+d:\Bersin\MvcColleagues\MvcColleagues.Azure\obj\Debug\MvcColleagues\Scripts\jquery-migrate-1.1.1.js
+d:\Bersin\MvcColleagues\MvcColleagues.Azure\obj\Debug\MvcColleagues\Scripts\jquery-migrate-1.1.1.min.js
 d:\Bersin\MvcColleagues\MvcColleagues.Azure\obj\Debug\MvcColleagues\Scripts\jquery-ui-1.10.3.custom.js
 d:\Bersin\MvcColleagues\MvcColleagues.Azure\obj\Debug\MvcColleagues\Scripts\jquery-ui-1.10.3.custom.min.js
-d:\Bersin\MvcColleagues\MvcColleagues.Azure\obj\Debug\MvcColleagues\Scripts\jquery-ui-1.8.24.js
-d:\Bersin\MvcColleagues\MvcColleagues.Azure\obj\Debug\MvcColleagues\Scripts\jquery-ui-1.8.24.min.js
 d:\Bersin\MvcColleagues\MvcColleagues.Azure\obj\Debug\MvcColleagues\Scripts\jquery.unobtrusive-ajax.js
 d:\Bersin\MvcColleagues\MvcColleagues.Azure\obj\Debug\MvcColleagues\Scripts\jquery.unobtrusive-ajax.min.js
 d:\Bersin\MvcColleagues\MvcColleagues.Azure\obj\Debug\MvcColleagues\Scripts\jquery.validate.js

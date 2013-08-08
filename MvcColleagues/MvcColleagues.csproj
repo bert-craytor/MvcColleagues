@@ -347,6 +347,7 @@
     <Content Include="Data\members.xml" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <None Include="Properties\PublishProfiles\MvcColleagues.pubxml" />
     <None Include="Scripts\jquery-2.0.3.intellisense.js" />
     <Content Include="Images\Delete.png" />
     <Content Include="Images\Education.png" />

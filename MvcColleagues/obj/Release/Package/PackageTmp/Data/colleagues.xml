@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<colleagues>
+  <!-- colleagues of 103 -->
+  <colleague>
+    <uid1>103</uid1>
+    <uid2>101</uid2>
+  </colleague>
+  <colleague>
+    <uid1>103</uid1>
+    <uid2>106</uid2>
+  </colleague>
+  <colleague>
+    <uid1>103</uid1>
+    <uid2>111</uid2>
+  </colleague>
+  <colleague>
+    <uid1>103</uid1>
+    <uid2>116</uid2>
+  </colleague>
+  <colleague>
+    <uid1>103</uid1>
+    <uid2>120</uid2>
+  </colleague>
+  <!-- colleagues of 102 -->
+  <colleague>
+    <uid1>102</uid1>
+    <uid2>106</uid2>
+  </colleague>
+  <colleague>
+    <uid1>102</uid1>
+    <uid2>111</uid2>
+  </colleague>
+  <colleague>
+    <uid1>102</uid1>
+    <uid2>116</uid2>
+  </colleague>
+  <!-- colleagues of 110 -->
+  <colleague>
+    <uid1>110</uid1>
+    <uid2>101</uid2>
+  </colleague>
+  <colleague>
+    <uid1>110</uid1>
+    <uid2>111</uid2>
+  </colleague>
+  <!-- colleagues of 116 -->
+  <colleague>
+    <uid1>116</uid1>
+    <uid2>101</uid2>
+  </colleague>
+  <colleague>
+    <uid1>116</uid1>
+    <uid2>111</uid2>
+  </colleague>
+  <colleague>
+    <uid1>116</uid1>
+    <uid2>120</uid2>
+  </colleague>
+
+</colleagues>

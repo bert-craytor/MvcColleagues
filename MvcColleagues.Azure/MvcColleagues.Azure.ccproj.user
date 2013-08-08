@@ -4,5 +4,6 @@
     <PackageProfile>Cloud</PackageProfile>
     <PackageSolutionConfiguration>Debug</PackageSolutionConfiguration>
     <PackageEnableRemoteDesktop>True</PackageEnableRemoteDesktop>
+    <ActivePublishProfile>NinjaSelectProduction</ActivePublishProfile>
   </PropertyGroup>
 </Project>
