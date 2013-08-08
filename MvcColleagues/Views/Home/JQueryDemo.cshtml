@@ -1,0 +1,107 @@
+﻿@{
+    ViewBag.Title = "JQuery Demo";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>@ViewBag.Message</h2>
+</hgroup>
+
+<div class='demo1'>
+    <button id="securityControlsBt">Update List of Security Controls</button>  <br/>
+    <label for="spinner">Number of security levels:</label>
+    <input id="spinner"  style="width:30px;"    name="value" /><br/>
+    <button id="getSecurityBt">Get Security Levels</button><br/>
+    <button id="drawSquaresBt">Draw Squares</button><br/>
+    <br/>
+    <br/>
+    <p id='results'>
+    [results]
+    </p>
+</div>
+
+<div id='squares1' >
+
+</div>
+<br/>
+<div id='squares2' >
+
+</div>
+<script type="text/javascript">
+    var levelCount =-1;
+
+
+    $(document).ready(function() {
+
+        // Create the JQuery UI Spinner Widget, to allow the user to
+        // specify the number of security levels, with an initial value of 5
+        var spinner = $( "#spinner" ).spinner();
+        spinner.spinner('option','max',10);
+        spinner.spinner('option','min',1);
+        spinner.spinner( "value", 5 );
+
+        // Construct or DemoBase.SecurityDialogs object from prototype
+        var demo = new DemoBase.SecurityDialogs();
+
+        // Define the initial features
+        demo.features = ['Add', 'Update', 'Delete'];
+
+        var secControls = null;  // Holds the widget for updating security control features
+        var secLevels=null;  // track the number of security leves
+        var controlLevelsDialog;  // Holds the widget for updating the security control levels
+
+        // This handler will allow new features to be added.
+        $("#securityControlsBt").click(function() {
+
+             if(secControls === null) {
+                 secControls = demo.createFeatureLevelPopup(document, "secControls", "Update Security Features", 1,100,100,true);
+             }
+
+             if(secControls!= null)
+                if(!secControls.dialog('isOpen'))
+                {
+                    //   function (doc, tableId, dlg, title, x, y, minWidth, minHeight) {
+                    demo.addNewRowButton(document, 'secControls', secControls, 'Update Security Features', 10,10, 100, 100,demo.features,this.updatedSecurityControls);
+                    secControls.width= '150px';
+                    secControls.dialog('open');
+
+                }
+                else
+                {
+                    secControls.dialog('close');
+                }
+            // To indicate that we will probably need to rebuild the dialog for security control levels
+            demo.updatedSecurityControls=true;
+       });
+
+        // This handler will allow the user to set the security levels for each feature
+        $( "#getSecurityBt" ).click(function() {
+
+            var newLevels = spinner.spinner( "value" );
+
+            if(secLevels === null || newLevels != levelCount || demo.updatedSecurityControls){
+               levelCount = newLevels;
+               if(secLevels !== null){
+                   secLevels.dialog('destroy');
+               }
+               secLevels = demo.createFeatureLevelPopup(document, "security", "Security Levels", levelCount+1,100,100,true, demo.features);
+               demo.addReportLevelsButton(document,  "security", secLevels, 'Security Levels', 10,10, 100, 100,demo.features,demo.levels);
+               demo.updatedSecurityControls = false;
+            }
+
+
+            secLevels.width= 60*(levelCount+2)+40;
+            secLevels.dialog('open');
+
+        });
+
+        // This handler will generate nested squares
+        $("#drawSquaresBt").click(function() {
+              demo.drawSquares(document, $('#squares1'), 0,8);
+              demo.drawSquares(document, $('#squares2'), 10,25);
+        } );
+
+    });
+</script>
+
+<p> &copy; 2013 Bert Craytor, Pacifica, CA 94044 </p>

@@ -267,6 +267,13 @@ namespace MvcColleagues.Controllers
             return View();
         }
 
+        public ActionResult JQueryDemo()
+        {
+            ViewBag.Message = "";
+
+            return View();
+        }
+
         public ActionResult Contact()
         {
             ViewBag.Message = "";

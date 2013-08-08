@@ -5,10 +5,10 @@
     <ignored path="Motif.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Demo.html" changelist="138457cd-84d2-46e8-904e-b37eafb3f21b" time="1375716465690" ignored="false" />
-    <file path="/DemoBase.js" changelist="138457cd-84d2-46e8-904e-b37eafb3f21b" time="1375921100855" ignored="false" />
+    <file path="/DemoBase.js" changelist="138457cd-84d2-46e8-904e-b37eafb3f21b" time="1375931819534" ignored="false" />
     <file path="/a.html" changelist="138457cd-84d2-46e8-904e-b37eafb3f21b" time="1375385549986" ignored="false" />
     <file path="/Site.css" changelist="138457cd-84d2-46e8-904e-b37eafb3f21b" time="1375482695221" ignored="false" />
-    <file path="/fragment.js" changelist="138457cd-84d2-46e8-904e-b37eafb3f21b" time="1375717321007" ignored="false" />
+    <file path="/fragment.js" changelist="138457cd-84d2-46e8-904e-b37eafb3f21b" time="1375929106005" ignored="false" />
     <file path="/jquery.ui.dialog.css" changelist="138457cd-84d2-46e8-904e-b37eafb3f21b" time="1375650193214" ignored="false" />
     <file path="/jquery.ui.progressbar.css" changelist="138457cd-84d2-46e8-904e-b37eafb3f21b" time="1375562700607" ignored="false" />
     <file path="/abc.html" changelist="138457cd-84d2-46e8-904e-b37eafb3f21b" time="1375672277464" ignored="false" />
@@ -32,54 +32,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Demo.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Demo.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Demo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="171" column="25" selection-start="4644" selection-end="4644" vertical-scroll-proportion="0.2087447">
+            <state line="207" column="43" selection-start="6273" selection-end="6273" vertical-scroll-proportion="-5.230769">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DemoBase.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="DemoBase.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Scripts/Other/DemoBase.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="272" column="17" selection-start="9706" selection-end="9706" vertical-scroll-proportion="0.0">
+            <state line="287" column="94" selection-start="10715" selection-end="10715" vertical-scroll-proportion="0.26177284">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <marker date="1375922928183" expanded="false" signature="1330:1337" placeholder="..." />
-                <marker date="1375922928183" expanded="false" signature="1438:1447" placeholder="..." />
-                <marker date="1375922928183" expanded="false" signature="1593:1634" placeholder="..." />
-                <marker date="1375922928183" expanded="false" signature="8747:8758" placeholder="..." />
-                <marker date="1375922928183" expanded="false" signature="8877:8894" placeholder="..." />
+                <marker date="1375932507210" expanded="true" signature="1336:1343" placeholder="..." />
+                <marker date="1375932507210" expanded="true" signature="1444:1453" placeholder="..." />
+                <marker date="1375932507210" expanded="true" signature="1607:1648" placeholder="..." />
+                <marker date="1375932507210" expanded="true" signature="9111:9122" placeholder="..." />
+                <marker date="1375932507210" expanded="true" signature="9249:9266" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://D:/Motif/js/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="473" column="73" selection-start="16427" selection-end="16427" vertical-scroll-proportion="-10.64">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery-2.0.3.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Scripts/jquery-2.0.3.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="589" column="0" selection-start="14893" selection-end="14893" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery-migrate-1.1.1.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Scripts/jquery-migrate-1.1.1.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="214" column="0" selection-start="6961" selection-end="6961" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -109,8 +82,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1969" />
-    <option name="y" value="46" />
+    <option name="x" value="104" />
+    <option name="y" value="77" />
     <option name="width" value="1674" />
     <option name="height" value="966" />
   </component>
@@ -174,24 +147,56 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Motif" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JQueryExercise" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Motif" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JQueryExercise" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Other" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="options.splitter.main.proportions" value="0.3" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="reference.idesettings.debugger.javascript" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="reference.idesettings.debugger.javascript" />
     <property name="JavaScriptLanguageLevel" value="JS_1_8_5" />
-    <property name="last_opened_file_path" value="D:/Motif/js/main.js" />
     <property name="restartRequiresConfirmation" value="false" />
+    <property name="last_opened_file_path" value="D:/Motif/js/main.js" />
     <property name="FullScreen" value="false" />
     <property name="JavaScriptPreferStrict" value="true" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -263,14 +268,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1969" y="46" width="1674" height="966" extended-state="0" />
-    <editor active="false" />
+    <frame x="104" y="77" width="1674" height="966" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20061162" sideWeight="0.94416875" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.055831265" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.055831265" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -343,14 +348,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/Scripts/Other/DemoBase.js</url>
-          <line>274</line>
-          <option name="timeStamp" value="100" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="101" />
+      <option name="time" value="108" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -404,9 +402,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Scripts/jquery-ui-1.10.3.custom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9379" column="175" selection-start="292663" selection-end="292663" vertical-scroll-proportion="-200.48822">
-          <folding />
-        </state>
+        <state line="9379" column="175" selection-start="292663" selection-end="292663" vertical-scroll-proportion="-200.48822" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Content/themes/custom/jquery.ui.core.css">
@@ -426,38 +422,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://D:/Motif/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="473" column="73" selection-start="16427" selection-end="16427" vertical-scroll-proportion="-10.64" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Scripts/jquery-2.0.3.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="589" column="0" selection-start="14893" selection-end="14893" vertical-scroll-proportion="0.0">
+        <state line="4359" column="8" selection-start="118818" selection-end="118818" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Motif/js/main.js">
+    <entry file="file://$PROJECT_DIR$/Demo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="473" column="73" selection-start="16427" selection-end="16427" vertical-scroll-proportion="-10.64">
+        <state line="207" column="43" selection-start="6273" selection-end="6273" vertical-scroll-proportion="-5.230769">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Scripts/Other/DemoBase.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="272" column="17" selection-start="9706" selection-end="9706" vertical-scroll-proportion="0.0">
+        <state line="287" column="94" selection-start="10715" selection-end="10715" vertical-scroll-proportion="0.26177284">
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <marker date="1375922928183" expanded="false" signature="1330:1337" placeholder="..." />
-            <marker date="1375922928183" expanded="false" signature="1438:1447" placeholder="..." />
-            <marker date="1375922928183" expanded="false" signature="1593:1634" placeholder="..." />
-            <marker date="1375922928183" expanded="false" signature="8747:8758" placeholder="..." />
-            <marker date="1375922928183" expanded="false" signature="8877:8894" placeholder="..." />
+            <marker date="1375932507210" expanded="true" signature="1336:1343" placeholder="..." />
+            <marker date="1375932507210" expanded="true" signature="1444:1453" placeholder="..." />
+            <marker date="1375932507210" expanded="true" signature="1607:1648" placeholder="..." />
+            <marker date="1375932507210" expanded="true" signature="9111:9122" placeholder="..." />
+            <marker date="1375932507210" expanded="true" signature="9249:9266" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="171" column="25" selection-start="4644" selection-end="4644" vertical-scroll-proportion="0.2087447">
-          <folding />
         </state>
       </provider>
     </entry>
