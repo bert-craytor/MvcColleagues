@@ -261,7 +261,7 @@ DemoBase.SecurityDialogs.prototype = function () {
             this.dlg =  createDialog(tblHtml, this.title, this.xOffset, this.yOffset, this.minWidth, this.minHeight);
 
              // Add handlers for cell click
-            $('table').click(function (e) {
+            $('td').click(function (e) {
 
                var  rowIndex =  $(this).parent().parent().children().index($(this).parent()),
                     colIndex = $(this).parent().children().index($(this)),
@@ -272,7 +272,7 @@ DemoBase.SecurityDialogs.prototype = function () {
 
 
 
-                var x = e;
+
 
                 if (colIndex > 0) {
                     table = doc.getElementById(tableId);
